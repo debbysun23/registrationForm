@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <title>covid-19 form</title>
+     <link rel="stylesheet" type="text/css" href="syntax.css">
+ </head>
+ <body> 
+       
+             <table class="vee">
+                 <tr>
+                     <td id="form2">
+                            <form id="submit" onsubmit="event.preventDefault();" autocomplete="on">
+                             <div>
+                                <label for="firstName" class="name" >First Name:</label>
+                                <input class="dee" type="text" name="firstName:" id="firstName" required>
+                             </div>
+                             <div>
+                                <label for="lastName" class="last">Last Name:</label>
+                                <input class="see" type="text"  name="lastName:" id="lastName" required>
+                             </div>
+                             <div>
+                                <label for="email" class="Address">Email Address:</label>
+                                <input class="email" type="email" name="email" id="email" required>
+                             </div>
+                             <div>
+                             <label class="gen" for="gender">Gender:</label>
+                             <input id="gender" type="" name="gender" list="Genders" placeholder="Male, Female" required>   
+                             </div>
+                             <div>
+                                <input class="list"  type="checkbox" value="No" name="checkBox"  id="checkBox"> 
+                                <label for="accept">Recently came in to Nigeria within the last 14days?</label>
+                             </div>
+                             <div class="form-action-button">
+                                 <input class="button" type="submit" value="submit" id="faith">
+                             </div>
+                            </form>
+                     </td>
+                              
+                        <td id="hide">
+                          <table class="list-2" id="covidList" >
+                             <thead>
+                                <tr id="red">
+                                    <th>Name</th>
+                                    <th>Email Address</th>
+                                    <th>Gender</th>
+                                    <th>Came to Nigeria<br> within the last 14<br> days?</th> 
+                                    <th id="fit"></th>
+                                    <th></th>
+                                </tr>
+                             </thead>
+                             <tbody>
+
+                             </tbody>
+                           </table>
+                       </td>
+                   </tr> 
+             </table>
+             
+        <datalist id="Genders"/>
+            <option value="Male" />
+            <option value="Female" />
+        </datalist>
+        <script src="test.js"></script>
+ </body>   
+</html>

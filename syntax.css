@@ -1,0 +1,121 @@
+body{
+    height:800px;
+   width: 760px;
+    margin: auto;
+}
+.vee{
+
+    border: 1px solid grey;
+    color: pink;
+    width: 600px;
+    margin: 30px;
+}
+
+.name{
+    margin: 5px 20px; 
+}
+.last{
+    margin: 5px 21px;
+}
+#form2{
+    background-color: gray;
+}
+.Address{
+    margin: 5px 20px;
+}
+.email{
+    margin: 2px 5px;
+}
+.see{
+    margin: 5px 25px;
+}
+.dee{
+    margin: 5px 25px;
+}
+
+#hide{
+   display: none;
+   position: relative; 
+   top: 100px;
+   left: 370px;
+   color: #000;
+}
+
+.gen{
+    margin: 10px 20px ;
+}
+#gender{
+    margin: 10px 50px;
+}
+.list{
+    margin: 5px 20px;
+}
+th{
+    color: white;
+}
+
+tbody{
+    background-color: white;
+    
+}
+
+.form-action-button{
+   margin: 5px 200px;
+}
+.button{
+    background-color:pink;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+.button:hover{
+    background-color: gray;
+    color: pink;
+}
+
+ #covidList{
+    border: 3px solid black;
+    min-width: 800px;
+    right: 270px;
+ }
+.list-2{
+    position: absolute;
+    margin-top: 130px;
+    right: 380px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+table, th, td {
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+button{
+    background-color:white;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 2px 10px; 
+}
+button:hover{
+    background-color:gray;
+    color: white;
+}
+
+th{
+    background-color: gray; 
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 0px 30px
+}
+
+
+
+
+
+
+    
+
