@@ -24,8 +24,12 @@
                                 <input class="email" type="email" name="email" id="email" required>
                              </div>
                              <div>
-                             <label class="gen" for="gender">Gender:</label>
-                             <input id="gender" type="" name="gender" list="Genders" placeholder="Male, Female" required>   
+                             <label class="gen" id="gender" >Gender:</label>
+                             <select id="gee">
+                                <option>Select Your Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                             </select>
                              </div>
                              <div>
                                 <input class="list"  type="checkbox" value="No" name="checkBox"  id="checkBox"> 
@@ -57,10 +61,6 @@
                    </tr> 
              </table>
              
-        <datalist id="Genders"/>
-            <option value="Male" />
-            <option value="Female" />
-        </datalist>
         <script src="test.js"></script>
  </body>   
 </html>
