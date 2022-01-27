@@ -4,6 +4,8 @@ var length_sub;
 var time;
 var chek;
 var ccb;
+var details;
+var details2;
 
 var selectedRow = null;
 var addForm = document.forms["submit"];
@@ -24,19 +26,22 @@ addForm.addEventListener("submit", function (e) {
 function readFormData() {
   var formData = {};
   formData["firstName"] = document.getElementById("firstName").value;
-  length_fn = formData["firstName"].length;
   formData["lastName"] = document.getElementById("lastName").value;
-  length_ln = formData["lastName"].length;
   formData["email"] = document.getElementById("email").value;
   formData["gender"] = document.getElementById("gee").value;
   formData["checkBox"] = chb.value;
   return formData;
 }
 
-function insertNewRecord(data) {
+function insertNewRecord(data) {  
+  var table = document.getElementById("covidList").getElementsByTagName('tbody')[0];
   let ccb = data.checkBox;
   let str = data.firstName;
+  length_fn= data.firstName;
   let sub = data.lastName;
+  length_ln = data.lastName;
+  let fullNames = str + " " + sub;
+  console.log("mee", fullNames);
   const upperCase = (str) => {
     return str.toUpperCase();
   }
@@ -45,10 +50,9 @@ function insertNewRecord(data) {
     return sub.charAt(0).toUpperCase() + sub.slice(1);
   }
   sub = upperCase2(sub);
-  var table = document.getElementById("covidList").getElementsByTagName('tbody')[0];
   var newRow = table.insertRow(table.length);
   var cell1 = newRow.insertCell(0);
-  cell1.innerHTML = str + " " + sub;
+  cell1.innerHTML = str +  " " + sub;
   var cell2 = newRow.insertCell(1);
   cell2.innerHTML = data.email;
   var cell3 = newRow.insertCell(2);
@@ -70,23 +74,47 @@ function resetForm() {
   selectedRow = null;
 }
 
+var rah = document.getElementById("firstName");
+var bah = document.getElementById("lastName");
 function onEdit(td) {
-  let chek = document.getElementById("checkBox");
-  if (chek.value == "Yes") {
-    chek.checked = true;
-  } else {
-    chek.checked = false;
-  }
+  selectedRow = td.parentElement.parentElement;
   time = document.getElementById("faith");
   time.value = "Update";
-  selectedRow = td.parentElement.parentElement;
-  LASTname_length = length_fn + 1;
-  let NAME = selectedRow.cells[0].innerHTML;
-  document.getElementById("firstName").value = NAME.substr(0, length_fn).toLowerCase();
-  document.getElementById("lastName").value = NAME.substr(LASTname_length, length_ln).toLowerCase();
+  let dem =length_fn;
+  let fem = length_ln;
+  console.log("she",dem);
+  let fullName2 = fem+ " " +dem;
+  console.log("vee",fullName2)
+  let details2 = fullName2.split(" ",1);
+ console.log("ere", details)
+ let NAME = selectedRow.cells[0].innerHTML;
+ console.log("ee",NAME)
+ const lowerCase = (NAME) => {
+   return NAME.toLowerCase();
+ }
+  NAME = lowerCase(NAME);
+  let name = NAME.split(" ",1);
+  let fame = selectedRow.cells[0].innerHTML;
+  const lowerCase2 = (fame) => {
+    return fame.toLowerCase();
+  }
+    fame = lowerCase2(fame);
+  let dame = fame.split(" ").splice(-1);
+  console.log("rrrr", name)
+ value = details;
+ console.log("kee",value)
+ console.log("xx", value);
+ console.log("go", details2);
+  rah.value = name;
+  bah.value = dame;
   document.getElementById("email").value = selectedRow.cells[1].innerHTML;
   document.getElementById("gee").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("checkBox").value = selectedRow.cells[3].innerHTML;
+  chb.value = selectedRow.cells[3].innerHTML;
+  if (chb.value == "Yes") {
+    chb.checked = true;
+  } else {
+    chb.checked = false;
+  }
 }
 
 function updateRecord(formData) {
@@ -137,3 +165,4 @@ function clearCb() {
     input.checked = false;
   }
 };
+98/9999999999999
